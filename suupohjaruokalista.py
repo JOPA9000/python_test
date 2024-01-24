@@ -1,9 +1,9 @@
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup as bs
 
 url = "https://sedu.fi/kampus/sedu-seinajoki-suupohjantie/#ruokalista"
 response = requests.get(url)
-soup = BeautifulSoup(response.content, 'html.parser')
+soup = bs(response.content, 'html.parser')
 header = soup.find(lambda tag:tag.name=="h1" and "Viikon ruokalista" in tag.text)
 element = soup.find(id='ruokalista')
 text = element.text
