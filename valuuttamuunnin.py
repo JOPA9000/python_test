@@ -21,7 +21,7 @@ def convert_currency():
     exchange_rate = c.get_rate(from_currency, to_currency)
     converted_amount = amount * exchange_rate
 
-    #Shows result of conversion
+    # Shows the result of conversion
     result_label.config(text=f"{amount} {currency_names[from_currency]} is equal to {converted_amount:.2f} {currency_names[to_currency]}")
 
 # Create the main window
@@ -62,12 +62,14 @@ amount_entry.pack()
 from_currency_label = tk.Label(window, text="From currency:")
 from_currency_label.pack()
 from_currency_combobox = ttk.Combobox(window, values=currency_options, state="readonly")
+from_currency_combobox.set("USD")
 from_currency_combobox.pack()
 
 # To currency dropdown menu
 to_currency_label = tk.Label(window, text="To currency:")
 to_currency_label.pack()
 to_currency_combobox = ttk.Combobox(window, values=currency_options, state="readonly")
+to_currency_combobox.set("EUR")
 to_currency_combobox.pack()
 
 # Convert button
