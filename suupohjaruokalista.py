@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup as bs
-
+'''Kommentti lisätty'''
 url = "https://sedu.fi/kampus/sedu-seinajoki-suupohjantie/#ruokalista"
 response = requests.get(url)
 soup = bs(response.content, 'html.parser')
