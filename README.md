@@ -1,2 +1,2 @@
 # python_test
-Testing
+Ohjelmistosuunnittelijana toimimisen kikkailua
